@@ -1,0 +1,162 @@
+
+/* Start Global Rulez */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+/* End Global Rulez */
+
+.header .overlay {
+	background-image: url('../images/home_top_bg.webp');
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+}
+
+/* Start Navbar */
+.navbar {
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 0;
+	width: 100%;
+}
+
+.navbar .container{
+	width: 1100px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar .logo a {
+	text-decoration: none;
+}
+
+.navbar .logo #brand {
+	font-size: 33px;
+	color: #FFF;
+}
+
+.navbar .menu > ul {
+	list-style-type: none;
+}
+
+.navbar .menu > ul > li {
+	display: inline-block;
+	margin-right: 20px;
+	padding: 20px 0;
+}
+
+.navbar .menu > ul > li > a {
+	padding: 20px 0;
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+	position: relative;
+}
+
+.navbar .menu > ul > li > a:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 12px;
+	width: 0%;
+	height: 3px;
+	background-color: skyblue;
+	transition: width 0.4s;
+}
+
+.navbar .menu > ul > li > a:hover:after,
+.navbar .menu > ul > li > a.active:after {
+	width: 100%;
+}
+
+.navbar .menu > ul > li.dropdown {
+	position: relative;
+}
+
+
+.navbar .menu > ul > li.dropdown > ul.dropdown-menu {
+	list-style-type: none;
+	position: absolute;
+	top: 58px;
+	border: 2px solid rgba(0, 0, 0, 0.4);
+	width: 150px;
+	border-radius: 6px;
+	background-color: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	z-index: 1;
+	visibility: hidden;
+	transition: visibility 0.2s, opacity 0.2s;
+}
+
+.navbar .menu > ul > li.dropdown:hover > ul.dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.navbar .menu > ul > li.dropdown > ul.dropdown-menu > li > a {
+	text-decoration: none;
+	color: #FFF;
+	display: block;
+	padding: 10px 0 10px 20px;
+	font-weight: bold;
+}
+
+.navbar .menu > ul > li.dropdown > ul.dropdown-menu > li > a:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+/* End Navbar */
+
+/* Start Header Content */
+.header .header-content {
+	position: absolute;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 20px 40px;
+	color: #FFF;
+}
+
+.header .header-content .title {
+	font-size: 44px;
+}
+
+.header .header-content p {
+	margin: 20px 0;
+}
+
+.header .header-content .btn {
+	font-size: 20px;
+	width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #AAA;
+    font-weight: bold;
+    transition: opacity 0.4s;
+}
+
+
+
+.header .header-content .btn.btn-start {
+	background-color: #FFF;
+	color: #000;
+}
+
+.header .header-content .btn.btn-learn {
+	background-color: skyblue;
+	color: white;
+}
+
+.header .header-content .btn:hover {
+	opacity: 0.7;
+}
+/* End Header Content */
